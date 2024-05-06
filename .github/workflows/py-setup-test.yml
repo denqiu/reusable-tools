@@ -14,7 +14,7 @@ on:
         type: string
 
 jobs:
-  deploy:
+  setup-install-test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
