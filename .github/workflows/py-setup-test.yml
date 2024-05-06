@@ -1,0 +1,30 @@
+name: Python Setup, Installation, and Unit Testing
+
+on:
+  workflow_call:
+    inputs:
+      version:
+        required: true
+        type: string
+      install_file:
+        required: true
+        type: string
+      test_folder:
+        required: true
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup Python v${{inputs.version}}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{inputs.version}}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r ${{inputs.install_file}}
+    - name: Run tests
+      run: python -m unittest discover -s ${{inputs.test_folder}}
