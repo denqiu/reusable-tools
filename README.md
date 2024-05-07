@@ -14,7 +14,3 @@
     </li>
   </ol>
 </div>
-<h2>Reusable Python Scripts</h2>
-<div>
-  
-</div>
