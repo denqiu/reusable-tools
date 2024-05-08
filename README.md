@@ -15,7 +15,7 @@
     <li>
       Python Setup, Poetry, and Testing
       <ul>
-        <li>Requires <code>version</code>.</li>
+        <li>Requires <code>version</code>. No need to specify installation file or test folder.</li>
         <li>Uses <code>poetry</code> module for package management.</li>
         <li>Uses <code>pytest</code> module for testing.</li>
       </ul>
